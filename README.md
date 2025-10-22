@@ -10,6 +10,7 @@ Environment pengembangan berbasis Docker yang memungkinkan menjalankan multiple 
 - [Persyaratan Sistem](#persyaratan-sistem)
 - [Instalasi](#instalasi)
 - [Penggunaan](#penggunaan)
+- [Contoh Penggunaan](USAGE_EXAMPLES.md)
 - [Struktur Direktori](#struktur-direktori)
 - [Konfigurasi](#konfigurasi)
 - [Troubleshooting](#troubleshooting)
@@ -142,93 +143,113 @@ docker-compose logs
 
 ## 🎯 Penggunaan
 
-### Menjalankan Environment
+### Langkah-langkah Setup
+
+#### 1. Buat folder project didalam folder app
+
+Buat direktori untuk aplikasi baru di dalam folder `app/`:
 
 ```bash
-# Start semua services
+mkdir app/myapp
+```
+
+#### 2. Jalankan command build route
+
+Setup routing container terlebih dahulu:
+
+```bash
+bash route.sh
+```
+
+#### 3. Jalankan command build container
+
+Buat container aplikasi dengan versi PHP yang diinginkan:
+
+```bash
+bash build.sh -n {APP_NAME} -v {PHP_VERSION} -d {DIR}
+```
+
+**Parameter:**
+- `-n` = app name
+- `-v` = php version  
+- `-d` = directory root ( /public )
+
+**Contoh penggunaan:**
+
+```bash
+# PHP 8.3 dengan root directory default
+bash build.sh -n myapp -v 8.3
+
+# PHP 7.4 dengan custom directory
+bash build.sh -n legacyapp -v 7.4 -d /public
+
+# PHP 8.1 untuk API service
+bash build.sh -n apiservice -v 8.1
+```
+
+#### 4. Edit file host, dan tambah domain app.local
+
+Edit file hosts sistem untuk menambahkan domain lokal:
+
+```bash
+sudo nano /etc/hosts
+```
+
+Tambahkan baris berikut:
+
+```
+127.0.0.1 localhost app.local
+```
+
+**Untuk multiple aplikasi:**
+```
+127.0.0.1 localhost myapp.local legacyapp.local apiservice.local
+```
+
+#### 5. Restart container route
+
+Restart container nginx untuk menerapkan konfigurasi routing baru:
+
+```bash
+docker restart route
+```
+
+#### 6. Start container app
+
+Jalankan container aplikasi yang telah dibuat:
+
+```bash
+docker start myapp
+```
+
+**Atau untuk menjalankan semua container:**
+```bash
 docker-compose up -d
-
-# Stop semua services
-docker-compose down
-
-# Restart specific service
-docker-compose restart app1
-
-# View logs
-docker-compose logs -f app1
 ```
-
-### Membuat Aplikasi Baru
-
-#### Menggunakan Build Script
-
-```bash
-# Syntax: ./build.sh -n <nama_app> -v <versi_php> [-d <subdirectory>]
-
-# Contoh: Aplikasi dengan PHP 8.3
-./build.sh -n myapp -v 8.3
-
-# Contoh: Aplikasi dengan PHP 7.4 dan subdirectory
-./build.sh -n legacyapp -v 7.4 -d /public
-
-# Contoh: Aplikasi dengan PHP 8.1
-./build.sh -n apiservice -v 8.1
-```
-
-#### Manual Setup
-
-1. **Buat direktori aplikasi**:
-   ```bash
-   mkdir app/myapp
-   ```
-
-2. **Buat konfigurasi Apache**:
-   ```bash
-   cp config/apache2/app1.conf config/apache2/myapp.conf
-   ```
-
-3. **Edit konfigurasi sesuai kebutuhan**
-
-4. **Buat konfigurasi Nginx routing**:
-   ```bash
-   # File: config/route/myapp.conf
-   server {
-       listen 80;
-       server_name myapp.local;
-       
-       location / {
-           proxy_pass http://myapp:80;
-           proxy_set_header Host $host;
-           proxy_set_header X-Real-IP $remote_addr;
-       }
-   }
-   ```
 
 ### Mengakses Aplikasi
 
-#### Setup Local DNS
+Setelah mengikuti langkah-langkah setup di atas, aplikasi dapat diakses melalui browser:
 
-Tambahkan entries berikut ke file `/etc/hosts` (Linux/Mac) atau `C:\Windows\System32\drivers\etc\hosts` (Windows):
-
-```
-127.0.0.1 app1.local
-127.0.0.1 app2.local
-127.0.0.1 app3.local
-127.0.0.1 app4.local
-127.0.0.1 app5.local
-127.0.0.1 app6.local
-127.0.0.1 myapp.local
-```
-
-#### Browser Access
-
-- **PHP 5.6 App**: http://app1.local
-- **PHP 8.0 App**: http://app2.local
+#### Default Applications
+- **PHP 5.6**: http://app1.local
+- **PHP 8.0**: http://app2.local
 - **PHP 7.4 App**: http://app3.local
 - **PHP 8.3 App**: http://app4.local
 - **PHP 8.1 App**: http://app5.local
 - **PHP 8.2 App**: http://app6.local
 - **Custom App**: http://myapp.local
+
+### 📖 Contoh Penggunaan Lengkap
+
+Untuk contoh-contoh penggunaan yang lebih detail dan spesifik, lihat [USAGE_EXAMPLES.md](USAGE_EXAMPLES.md) yang mencakup:
+
+- **Setup Laravel Application**
+- **Legacy PHP 5.6 System**
+- **Multiple API Services**
+- **WordPress Installation**
+- **PHP Version Migration**
+- **Monitoring & Maintenance**
 
 ## 📁 Struktur Direktori
 

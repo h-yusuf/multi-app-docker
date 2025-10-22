@@ -60,20 +60,62 @@ Buka browser dan akses:
 
 ## 🎯 Membuat Aplikasi Pertama
 
-### Menggunakan Build Script
+### Langkah-langkah Setup
+
+#### 1. Buat folder project didalam folder app
 
 ```bash
-# Buat aplikasi dengan PHP 8.3
-./build.sh -n myapp -v 8.3
-
-# Tambahkan ke hosts
-echo "127.0.0.1 myapp.local" | sudo tee -a /etc/hosts
-
-# Buat file test
-echo "<?php phpinfo(); ?>" > app/myapp/index.php
-
-# Akses http://myapp.local
+mkdir app/myapp
 ```
+
+#### 2. Jalankan command build route
+
+```bash
+bash route.sh
+```
+
+#### 3. Jalankan command build container
+
+```bash
+bash build.sh -n myapp -v 8.3
+```
+
+**Parameter:**
+- `-n` = app name (myapp)
+- `-v` = php version (8.3)
+- `-d` = directory root ( /public ) - opsional
+
+#### 4. Edit file host, dan tambah domain app.local
+
+```bash
+sudo nano /etc/hosts
+```
+
+Tambahkan:
+```
+127.0.0.1 localhost myapp.local
+```
+
+#### 5. Restart container route
+
+```bash
+docker restart route
+```
+
+#### 6. Start container app
+
+```bash
+docker start myapp
+```
+
+#### 7. Test aplikasi
+
+Buat file test:
+```bash
+echo "<?php phpinfo(); ?>" > app/myapp/index.php
+```
+
+Akses: http://myapp.local
 
 ### Manual Setup
 
@@ -130,28 +172,37 @@ docker restart route
 
 ## 📋 Common Commands
 
+### Management Commands
+
 ```bash
-# View all containers
+# View all containers status
 docker-compose ps
 
-# View logs
-docker-compose logs -f app1
+# View logs dari specific container
+docker-compose logs -f myapp
 
-# Restart service
-docker-compose restart app1
+# Restart container
+docker restart myapp
 
-# Stop all
+# Stop semua containers
 docker-compose down
 
-# Rebuild service
-docker-compose build --no-cache app1
-docker-compose up -d app1
+# Start semua containers
+docker-compose up -d
+```
 
-# Enter container
-docker exec -it app1 bash
+### Debugging Commands
+
+```bash
+# Enter container shell
+docker exec -it myapp bash
 
 # Check PHP version in container
-docker exec app1 php -v
+docker exec myapp php -v
+
+# Rebuild container jika ada masalah
+docker-compose build --no-cache myapp
+docker-compose up -d myapp
 ```
 
 ## 🔧 Quick Fixes
