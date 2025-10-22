@@ -451,3 +451,7 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 [Wed Oct 22 08:36:56.230637 2025] [core:warn] [pid 9] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
 [Wed Oct 22 08:36:56.234517 2025] [mpm_prefork:notice] [pid 9] AH00163: Apache/2.4.52 (Ubuntu) OpenSSL/3.0.2 configured -- resuming normal operations
 [Wed Oct 22 08:36:56.234628 2025] [core:notice] [pid 9] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.2. Set the 'ServerName' directive globally to suppress this message
+[Wed Oct 22 11:28:40.180118 2025] [core:warn] [pid 8] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Oct 22 11:28:40.234186 2025] [mpm_prefork:notice] [pid 8] AH00163: Apache/2.4.52 (Ubuntu) OpenSSL/3.0.2 configured -- resuming normal operations
+[Wed Oct 22 11:28:40.235678 2025] [core:notice] [pid 8] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'

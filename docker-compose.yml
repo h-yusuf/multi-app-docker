@@ -102,6 +102,23 @@ services:
             - ./config/apache2/app6.conf:/etc/apache2/sites-available/000-default.conf:Z
             - ./log/app6:/var/log/apache2:Z
 
+    sparepart_tsp10:
+        build:
+            context: .
+            dockerfile: ./dockerfile/php-apache2.dockerfile
+            args:
+                - php_version=8.2
+                - app_name=sparepart_tsp10
+        networks:
+            - route
+        restart: always
+        container_name: sparepart_tsp10
+        volumes:
+            - ./app/sparepart_tsp10:/var/www/html:Z
+            - ./config/php8.2/php.ini:/etc/php/8.2/cli/php.ini:Z
+            - ./config/apache2/sparepart_tsp10.conf:/etc/apache2/sites-available/000-default.conf:Z
+            - ./log/sparepart_tsp10:/var/log/apache2:Z
+
     route:
         build:
             context: .
@@ -113,6 +130,7 @@ services:
             - app4
             - app5
             - app6
+            - sparepart_tsp10
         networks:
             - route
         restart: always

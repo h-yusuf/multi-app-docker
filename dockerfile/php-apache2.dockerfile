@@ -3,8 +3,8 @@ FROM ubuntu:22.04
 ARG php_version
 ARG app_name
 
-ENV php_version ${php_version:-5.6}
-ENV app_name ${php_version}
+ENV php_version=${php_version:-5.6}
+ENV app_name=${app_name}
 
 RUN apt-get update
 
@@ -32,11 +32,11 @@ RUN apt-get install -y \
     php$php_version-xml \
     php$php_version-dom
 
-RUN if [ $php_version != 8.0 ] ; then apt-get install -y php$php_version-json ; fi
+RUN if [ "$php_version" = "5.6" ] || [ "$php_version" = "7.0" ] || [ "$php_version" = "7.1" ] || [ "$php_version" = "7.2" ] || [ "$php_version" = "7.3" ] || [ "$php_version" = "7.4" ]; then apt-get install -y php$php_version-json ; fi
 
 RUN apt-get purge -y software-properties-common
 
-WORKDIR ~
+WORKDIR /tmp
 
 RUN curl -s https://getcomposer.org/installer | php
 
@@ -46,7 +46,7 @@ RUN update-alternatives --set php /usr/bin/php$php_version
 
 RUN a2enmod ssl && service apache2 start && a2enmod rewrite && service apache2 reload
 
-ENTRYPOINT /usr/sbin/apachectl -DFOREGROUND
+ENTRYPOINT ["/usr/sbin/apachectl", "-DFOREGROUND"]
 
 RUN rm -r /var/www/html && \
     rm /etc/php/$php_version/cli/php.ini && \

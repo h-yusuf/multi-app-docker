@@ -2270,3 +2270,126 @@
 2025/10/22 09:06:04 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
 2025/10/22 09:07:04 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
 2025/10/22 09:08:05 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 10:16:53 [error] 8#8: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 185.125.190.36, server: sparepart_tsp10.local, request: "GET /login HTTP/1.1", upstream: "http://172.18.0.2:80/login", host: "sparepart_tsp10.local"
+2025/10/22 10:16:54 [error] 8#8: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 185.125.190.36, server: sparepart_tsp10.local, request: "GET /favicon.ico HTTP/1.1", upstream: "http://172.18.0.2:80/favicon.ico", host: "sparepart_tsp10.local", referrer: "http://sparepart_tsp10.local/login"
+2025/10/22 10:17:47 [error] 8#8: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 185.125.190.36, server: sparepart_tsp10.local, request: "GET /login HTTP/1.1", upstream: "http://172.18.0.2:80/login", host: "sparepart_tsp10.local"
+2025/10/22 10:17:47 [error] 8#8: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 185.125.190.36, server: sparepart_tsp10.local, request: "GET /favicon.ico HTTP/1.1", upstream: "http://172.18.0.2:80/favicon.ico", host: "sparepart_tsp10.local", referrer: "http://sparepart_tsp10.local/login"
+2025/10/22 10:17:49 [error] 8#8: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 185.125.190.36, server: sparepart_tsp10.local, request: "GET /login HTTP/1.1", upstream: "http://172.18.0.2:80/login", host: "sparepart_tsp10.local"
+2025/10/22 10:17:49 [error] 8#8: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 185.125.190.36, server: sparepart_tsp10.local, request: "GET /favicon.ico HTTP/1.1", upstream: "http://172.18.0.2:80/favicon.ico", host: "sparepart_tsp10.local", referrer: "http://sparepart_tsp10.local/login"
+2025/10/22 10:17:50 [error] 8#8: *7 connect() failed (111: Connection refused) while connecting to upstream, client: 185.125.190.36, server: sparepart_tsp10.local, request: "GET /login HTTP/1.1", upstream: "http://172.18.0.2:80/login", host: "sparepart_tsp10.local"
+2025/10/22 10:17:50 [error] 8#8: *7 connect() failed (111: Connection refused) while connecting to upstream, client: 185.125.190.36, server: sparepart_tsp10.local, request: "GET /favicon.ico HTTP/1.1", upstream: "http://172.18.0.2:80/favicon.ico", host: "sparepart_tsp10.local", referrer: "http://sparepart_tsp10.local/login"
+2025/10/22 10:17:52 [error] 8#8: *7 connect() failed (111: Connection refused) while connecting to upstream, client: 185.125.190.36, server: sparepart_tsp10.local, request: "GET /login HTTP/1.1", upstream: "http://172.18.0.2:80/login", host: "sparepart_tsp10.local"
+2025/10/22 10:17:52 [error] 8#8: *7 connect() failed (111: Connection refused) while connecting to upstream, client: 185.125.190.36, server: sparepart_tsp10.local, request: "GET /favicon.ico HTTP/1.1", upstream: "http://172.18.0.2:80/favicon.ico", host: "sparepart_tsp10.local", referrer: "http://sparepart_tsp10.local/login"
+2025/10/22 10:19:13 [error] 8#8: *14 connect() failed (111: Connection refused) while connecting to upstream, client: 185.125.190.36, server: sparepart_tsp10.local, request: "GET /login HTTP/1.1", upstream: "http://172.18.0.2:80/login", host: "sparepart_tsp10.local"
+2025/10/22 10:19:14 [error] 8#8: *14 connect() failed (111: Connection refused) while connecting to upstream, client: 185.125.190.36, server: sparepart_tsp10.local, request: "GET /favicon.ico HTTP/1.1", upstream: "http://172.18.0.2:80/favicon.ico", host: "sparepart_tsp10.local", referrer: "http://sparepart_tsp10.local/login"
+2025/10/22 10:19:16 [error] 8#8: *17 connect() failed (111: Connection refused) while connecting to upstream, client: 185.125.190.36, server: sparepart_tsp10.local, request: "GET /login HTTP/1.1", upstream: "http://172.18.0.2:80/login", host: "sparepart_tsp10.local"
+2025/10/22 10:19:16 [error] 8#8: *17 connect() failed (111: Connection refused) while connecting to upstream, client: 185.125.190.36, server: sparepart_tsp10.local, request: "GET /favicon.ico HTTP/1.1", upstream: "http://172.18.0.2:80/favicon.ico", host: "sparepart_tsp10.local", referrer: "http://sparepart_tsp10.local/login"
+2025/10/22 10:19:18 [error] 8#8: *17 connect() failed (111: Connection refused) while connecting to upstream, client: 185.125.190.36, server: sparepart_tsp10.local, request: "GET /login HTTP/1.1", upstream: "http://172.18.0.2:80/login", host: "sparepart_tsp10.local"
+2025/10/22 10:19:18 [error] 8#8: *17 connect() failed (111: Connection refused) while connecting to upstream, client: 185.125.190.36, server: sparepart_tsp10.local, request: "GET /favicon.ico HTTP/1.1", upstream: "http://172.18.0.2:80/favicon.ico", host: "sparepart_tsp10.local", referrer: "http://sparepart_tsp10.local/login"
+2025/10/22 10:19:20 [error] 8#8: *24 connect() failed (111: Connection refused) while connecting to upstream, client: 185.125.190.36, server: sparepart_tsp10.local, request: "GET /login HTTP/1.1", upstream: "http://172.18.0.2:80/login", host: "sparepart_tsp10.local"
+2025/10/22 10:19:20 [error] 8#8: *24 connect() failed (111: Connection refused) while connecting to upstream, client: 185.125.190.36, server: sparepart_tsp10.local, request: "GET /favicon.ico HTTP/1.1", upstream: "http://172.18.0.2:80/favicon.ico", host: "sparepart_tsp10.local", referrer: "http://sparepart_tsp10.local/login"
+2025/10/22 10:19:33 [error] 8#8: *28 connect() failed (111: Connection refused) while connecting to upstream, client: 185.125.190.36, server: sparepart_tsp10.local, request: "GET / HTTP/1.1", upstream: "http://172.18.0.2:80/", host: "sparepart_tsp10.local"
+2025/10/22 10:19:34 [error] 8#8: *28 connect() failed (111: Connection refused) while connecting to upstream, client: 185.125.190.36, server: sparepart_tsp10.local, request: "GET /favicon.ico HTTP/1.1", upstream: "http://172.18.0.2:80/favicon.ico", host: "sparepart_tsp10.local", referrer: "http://sparepart_tsp10.local/"
+2025/10/22 10:21:35 [error] 8#8: *32 connect() failed (111: Connection refused) while connecting to upstream, client: 185.125.190.36, server: sparepart_tsp10.local, request: "GET / HTTP/1.1", upstream: "http://172.18.0.2:80/", host: "sparepart_tsp10.local"
+2025/10/22 10:21:36 [error] 7#7: *34 connect() failed (111: Connection refused) while connecting to upstream, client: 185.125.190.36, server: sparepart_tsp10.local, request: "GET /favicon.ico HTTP/1.1", upstream: "http://172.18.0.2:80/favicon.ico", host: "sparepart_tsp10.local", referrer: "http://sparepart_tsp10.local/"
+2025/10/22 10:25:25 [error] 8#8: *2 connect() failed (111: Connection refused) while connecting to upstream, client: 185.125.190.36, server: sparepart_tsp10.local, request: "GET / HTTP/1.1", upstream: "http://172.18.0.2:80/", host: "sparepart_tsp10.local"
+2025/10/22 10:25:27 [error] 8#8: *2 connect() failed (111: Connection refused) while connecting to upstream, client: 185.125.190.36, server: sparepart_tsp10.local, request: "GET /favicon.ico HTTP/1.1", upstream: "http://172.18.0.2:80/favicon.ico", host: "sparepart_tsp10.local", referrer: "http://sparepart_tsp10.local/"
+2025/10/22 10:28:26 [error] 7#7: *5 connect() failed (111: Connection refused) while connecting to upstream, client: 185.125.190.36, server: sparepart_tsp10.local, request: "GET / HTTP/1.1", upstream: "http://172.18.0.2:80/", host: "sparepart_tsp10.local"
+2025/10/22 10:28:27 [error] 7#7: *5 connect() failed (111: Connection refused) while connecting to upstream, client: 185.125.190.36, server: sparepart_tsp10.local, request: "GET /favicon.ico HTTP/1.1", upstream: "http://172.18.0.2:80/favicon.ico", host: "sparepart_tsp10.local", referrer: "http://sparepart_tsp10.local/"
+2025/10/22 10:29:44 [error] 7#7: *9 connect() failed (111: Connection refused) while connecting to upstream, client: 185.125.190.36, server: sparepart_tsp10.local, request: "GET / HTTP/1.1", upstream: "http://172.18.0.2:80/", host: "sparepart_tsp10.local"
+2025/10/22 10:29:45 [error] 7#7: *9 connect() failed (111: Connection refused) while connecting to upstream, client: 185.125.190.36, server: sparepart_tsp10.local, request: "GET /favicon.ico HTTP/1.1", upstream: "http://172.18.0.2:80/favicon.ico", host: "sparepart_tsp10.local", referrer: "http://sparepart_tsp10.local/"
+2025/10/22 10:30:20 [error] 8#8: *2 connect() failed (111: Connection refused) while connecting to upstream, client: 185.125.190.36, server: sparepart_tsp10.local, request: "GET / HTTP/1.1", upstream: "http://172.18.0.2:80/", host: "sparepart_tsp10.local"
+2025/10/22 10:30:20 [error] 8#8: *4 connect() failed (111: Connection refused) while connecting to upstream, client: 185.125.190.36, server: sparepart_tsp10.local, request: "GET /favicon.ico HTTP/1.1", upstream: "http://172.18.0.2:80/favicon.ico", host: "sparepart_tsp10.local", referrer: "http://sparepart_tsp10.local/"
+2025/10/22 10:30:24 [error] 8#8: *4 connect() failed (111: Connection refused) while connecting to upstream, client: 185.125.190.36, server: sparepart_tsp10.local, request: "GET / HTTP/1.1", upstream: "http://172.18.0.2:80/", host: "sparepart_tsp10.local"
+2025/10/22 10:30:25 [error] 8#8: *4 connect() failed (111: Connection refused) while connecting to upstream, client: 185.125.190.36, server: sparepart_tsp10.local, request: "GET /favicon.ico HTTP/1.1", upstream: "http://172.18.0.2:80/favicon.ico", host: "sparepart_tsp10.local", referrer: "http://sparepart_tsp10.local/"
+2025/10/22 10:31:09 [error] 9#9: *9 connect() failed (111: Connection refused) while connecting to upstream, client: 185.125.190.36, server: sparepart_tsp10.local, request: "GET / HTTP/1.1", upstream: "http://172.18.0.2:80/", host: "sparepart_tsp10.local"
+2025/10/22 10:31:09 [error] 9#9: *9 connect() failed (111: Connection refused) while connecting to upstream, client: 185.125.190.36, server: sparepart_tsp10.local, request: "GET /favicon.ico HTTP/1.1", upstream: "http://172.18.0.2:80/favicon.ico", host: "sparepart_tsp10.local", referrer: "http://sparepart_tsp10.local/"
+2025/10/22 10:31:58 [error] 8#8: *17 connect() failed (113: No route to host) while connecting to upstream, client: 185.125.190.36, server: sparepart_tsp10.local, request: "GET / HTTP/1.1", upstream: "http://172.18.0.2:80/", host: "sparepart_tsp10.local"
+2025/10/22 10:32:01 [error] 8#8: *17 connect() failed (113: No route to host) while connecting to upstream, client: 185.125.190.36, server: sparepart_tsp10.local, request: "GET /favicon.ico HTTP/1.1", upstream: "http://172.18.0.2:80/favicon.ico", host: "sparepart_tsp10.local", referrer: "http://sparepart_tsp10.local/"
+2025/10/22 10:32:40 [error] 8#8: *32 connect() failed (113: No route to host) while connecting to upstream, client: 185.125.190.36, server: sparepart_tsp10.local, request: "GET /login HTTP/1.1", upstream: "http://172.18.0.2:80/login", host: "sparepart_tsp10.local"
+2025/10/22 10:32:43 [error] 8#8: *32 connect() failed (113: No route to host) while connecting to upstream, client: 185.125.190.36, server: sparepart_tsp10.local, request: "GET /favicon.ico HTTP/1.1", upstream: "http://172.18.0.2:80/favicon.ico", host: "sparepart_tsp10.local", referrer: "http://sparepart_tsp10.local/login"
+2025/10/22 10:33:16 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 10:33:17 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 10:33:18 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 10:33:19 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 10:33:20 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 10:33:22 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 10:33:26 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 10:33:32 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 10:35:06 [error] 8#8: *2 connect() failed (111: Connection refused) while connecting to upstream, client: 185.125.190.36, server: sparepart_tsp10.local, request: "GET /login HTTP/1.1", upstream: "http://172.18.0.2:80/login", host: "sparepart_tsp10.local"
+2025/10/22 10:35:07 [error] 8#8: *2 connect() failed (111: Connection refused) while connecting to upstream, client: 185.125.190.36, server: sparepart_tsp10.local, request: "GET /favicon.ico HTTP/1.1", upstream: "http://172.18.0.2:80/favicon.ico", host: "sparepart_tsp10.local", referrer: "http://sparepart_tsp10.local/login"
+2025/10/22 10:37:06 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 10:37:07 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 10:37:07 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 10:37:07 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 10:37:08 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 10:37:10 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 10:37:14 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 10:37:20 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 10:37:33 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 10:37:59 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 10:38:51 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 10:39:51 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 10:40:51 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 10:41:52 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 10:42:52 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 10:43:53 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 10:44:54 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 10:45:55 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 10:46:55 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 10:47:56 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 10:48:58 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 10:57:24 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 10:57:25 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 10:57:26 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 10:57:46 [error] 8#8: *2 connect() failed (113: No route to host) while connecting to upstream, client: 185.125.190.36, server: sparepart_tsp10.local, request: "GET /login HTTP/1.1", upstream: "http://172.18.0.4:80/login", host: "sparepart_tsp10.local"
+2025/10/22 10:57:55 [error] 8#8: *5 connect() failed (111: Connection refused) while connecting to upstream, client: 185.125.190.36, server: sparepart_tsp10.local, request: "GET / HTTP/1.1", upstream: "http://172.18.0.4:80/", host: "sparepart_tsp10.local"
+2025/10/22 10:58:55 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 10:58:57 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 10:58:58 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 10:58:59 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 10:59:00 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 10:59:02 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 10:59:06 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 10:59:14 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 10:59:27 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 10:59:53 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 11:00:29 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 11:00:30 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 11:00:31 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 11:00:31 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 11:00:32 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 11:00:34 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 11:00:39 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 11:00:46 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 11:00:59 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 11:01:25 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 11:02:07 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 11:02:08 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 11:02:08 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 11:02:09 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 11:02:10 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 11:02:12 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 11:02:16 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 11:02:23 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 11:02:36 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 11:03:03 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 11:03:55 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 11:04:56 [emerg] 1#1: host not found in upstream "sparepart_tsp10" in /etc/nginx/conf.d/sparepart_tsp10.conf:10
+2025/10/22 11:26:55 [emerg] 1#1: host not found in upstream "sparepart_tsp" in /etc/nginx/conf.d/sparepart.conf:10
+2025/10/22 11:27:05 [emerg] 1#1: host not found in upstream "sparepart_tsp" in /etc/nginx/conf.d/sparepart.conf:10
+2025/10/22 11:27:07 [emerg] 1#1: host not found in upstream "sparepart_tsp" in /etc/nginx/conf.d/sparepart.conf:10
+2025/10/22 11:27:08 [emerg] 1#1: host not found in upstream "sparepart_tsp" in /etc/nginx/conf.d/sparepart.conf:10
+2025/10/22 11:27:09 [emerg] 1#1: host not found in upstream "sparepart_tsp" in /etc/nginx/conf.d/sparepart.conf:10
+2025/10/22 11:27:11 [emerg] 1#1: host not found in upstream "sparepart_tsp" in /etc/nginx/conf.d/sparepart.conf:10
+2025/10/22 11:27:15 [emerg] 1#1: host not found in upstream "sparepart_tsp" in /etc/nginx/conf.d/sparepart.conf:10
+2025/10/22 11:27:22 [emerg] 1#1: host not found in upstream "sparepart_tsp" in /etc/nginx/conf.d/sparepart.conf:10
+2025/10/22 11:27:37 [emerg] 1#1: host not found in upstream "sparepart_tsp" in /etc/nginx/conf.d/sparepart.conf:10
+2025/10/22 11:27:53 [emerg] 1#1: host not found in upstream "sparepart_tsp" in /etc/nginx/conf.d/sparepart.conf:10
+2025/10/22 11:27:54 [emerg] 1#1: host not found in upstream "sparepart_tsp" in /etc/nginx/conf.d/sparepart.conf:10
+2025/10/22 11:27:55 [emerg] 1#1: host not found in upstream "sparepart_tsp" in /etc/nginx/conf.d/sparepart.conf:10
+2025/10/22 11:27:55 [emerg] 1#1: host not found in upstream "sparepart_tsp" in /etc/nginx/conf.d/sparepart.conf:10
+2025/10/22 11:27:57 [emerg] 1#1: host not found in upstream "sparepart_tsp" in /etc/nginx/conf.d/sparepart.conf:10
+2025/10/22 11:27:59 [emerg] 1#1: host not found in upstream "sparepart_tsp" in /etc/nginx/conf.d/sparepart.conf:10
+2025/10/22 11:28:02 [emerg] 1#1: host not found in upstream "sparepart_tsp" in /etc/nginx/conf.d/sparepart.conf:10
+2025/10/22 11:28:09 [emerg] 1#1: host not found in upstream "sparepart_tsp" in /etc/nginx/conf.d/sparepart.conf:10
