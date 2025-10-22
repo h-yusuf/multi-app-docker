@@ -1,18 +1,17 @@
-#!/bash/bin
-docker network create --driver bridge route
+#!/bin/bash
 
+# Buat network jika belum ada
+docker network inspect route >/dev/null 2>&1 || docker network create --driver bridge route
+
+# Build image
 docker build -t route:latest -f ./dockerfile/route.dockerfile .
 
-if [[ $(docker inspect --format='{{.State.Running}}' route) == "true" ]];
-then
-    docker stop route
+# Stop & remove container jika ada
+if docker ps -a --format '{{.Names}}' | grep -q "^route$"; then
+  docker rm -f route
 fi
 
-if [[ $(docker inspect --format='{{.State.Running}}' route) == "false" ]];
-then
-    docker rm route
-fi
-
+# Jalankan container baru
 docker run -dit \
     -v "$PWD"/log/route:/var/log/nginx:Z \
     -v "$PWD"/config/route:/etc/nginx/conf.d:Z \
@@ -22,7 +21,3 @@ docker run -dit \
     -p 80:80 \
     route:latest \
     nginx -g 'daemon off;'
-
-docker exec -ti route service nginx restart
-
-docker exec -ti route service php7.4-fpm restart

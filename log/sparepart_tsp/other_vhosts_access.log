@@ -1,0 +1,7 @@
+172.19.0.6:80 172.19.0.3 - - [07/Jul/2025:16:48:33 +0700] "GET /password/expired HTTP/1.0" 404 461 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+172.19.0.6:80 172.19.0.3 - - [07/Jul/2025:16:49:00 +0700] "GET / HTTP/1.0" 200 1024 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+172.19.0.6:80 172.19.0.3 - - [07/Jul/2025:16:49:03 +0700] "GET /public/ HTTP/1.0" 500 817313 "http://sparepart_tsp.local/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+172.19.0.6:80 172.19.0.3 - - [08/Jul/2025:13:09:33 +0700] "GET / HTTP/1.0" 200 1021 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+172.19.0.4:80 172.19.0.2 - - [08/Jul/2025:13:11:54 +0700] "GET / HTTP/1.0" 200 1021 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+172.19.0.4:80 172.19.0.2 - - [08/Jul/2025:13:12:40 +0700] "GET /public/ HTTP/1.0" 302 1576 "http://sparepart_tsp.local/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+172.19.0.4:80 172.19.0.2 - - [08/Jul/2025:13:12:41 +0700] "GET /public/login HTTP/1.0" 404 461 "http://sparepart_tsp.local/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
