@@ -1,136 +1,48 @@
 version: "3.2"
 services:
-    app1:
+    sparepart_tsp:
         build:
             context: .
             dockerfile: ./dockerfile/php-apache2.dockerfile
             args:
-                - php_version=5.6
-                - app_name=app1
+                - php_version=8.2
+                - app_name=sparepart_tsp
         networks:
             - route
         restart: always
-        container_name: app1
+        container_name: sparepart_tsp
+        ports:
+            - "8001:80"
         volumes:
-            - ./app/app1:/var/www/html:Z
-            - ./config/php5.6/php.ini:/etc/php/5.6/cli/php.ini:Z
-            - ./config/apache2/app1.conf:/etc/apache2/sites-available/000-default.conf:Z
-            - ./log/app1:/var/log/apache2:Z
-
-    app2:
+            - ./app/sparepart_tsp:/var/www/html:Z
+            - ./config/php8.2/php.ini:/etc/php/8.2/cli/php.ini:Z
+            - ./config/apache2/sparepart_tsp.conf:/etc/apache2/sites-available/000-default.conf:Z
+            - ./log/sparepart_tsp:/var/log/apache2:Z
+    bengkel_gim:
         build:
             context: .
             dockerfile: ./dockerfile/php-apache2.dockerfile
             args:
                 - php_version=8.0
-                - app_name=app2
+                - app_name=bengkel_gim
         networks:
             - route
         restart: always
-        container_name: app2
+        container_name: bengkel_gim
+        ports:
+            - "8002:80"
         volumes:
-            - ./app/app2:/var/www/html:Z
-            - ./config/php8.0/php.ini:/etc/php/8.0/cli/php.ini:Z
-            - ./config/apache2/app2.conf:/etc/apache2/sites-available/000-default.conf:Z
-            - ./log/app2:/var/log/apache2:Z
-
-    app3:
-        build:
-            context: .
-            dockerfile: ./dockerfile/php-apache2.dockerfile
-            args:
-                - php_version=7.4
-                - app_name=app3
-        networks:
-            - route
-        restart: always
-        container_name: app3
-        volumes:
-            - ./app/app3:/var/www/html:Z
-            - ./config/php7.4/php.ini:/etc/php/7.4/cli/php.ini:Z
-            - ./config/apache2/app3.conf:/etc/apache2/sites-available/000-default.conf:Z
-            - ./log/app3:/var/log/apache2:Z
-
-    app4:
-        build:
-            context: .
-            dockerfile: ./dockerfile/php-apache2.dockerfile
-            args:
-                - php_version=8.3
-                - app_name=app4
-        networks:
-            - route
-        restart: always
-        container_name: app4
-        volumes:
-            - ./app/app4:/var/www/html:Z
-            - ./config/php8.3/php.ini:/etc/php/8.3/cli/php.ini:Z
-            - ./config/apache2/app4.conf:/etc/apache2/sites-available/000-default.conf:Z
-            - ./log/app4:/var/log/apache2:Z
-
-    app5:
-        build:
-            context: .
-            dockerfile: ./dockerfile/php-apache2.dockerfile
-            args:
-                - php_version=8.1
-                - app_name=app5
-        networks:
-            - route
-        restart: always
-        container_name: app5
-        volumes:
-            - ./app/app5:/var/www/html:Z
-            - ./config/php8.1/php.ini:/etc/php/8.1/cli/php.ini:Z
-            - ./config/apache2/app5.conf:/etc/apache2/sites-available/000-default.conf:Z
-            - ./log/app5:/var/log/apache2:Z
-
-    app6:
-        build:
-            context: .
-            dockerfile: ./dockerfile/php-apache2.dockerfile
-            args:
-                - php_version=8.2
-                - app_name=app6
-        networks:
-            - route
-        restart: always
-        container_name: app6
-        volumes:
-            - ./app/app6:/var/www/html:Z
+            - ./app/bengkel_gim:/var/www/html:Z
             - ./config/php8.2/php.ini:/etc/php/8.2/cli/php.ini:Z
-            - ./config/apache2/app6.conf:/etc/apache2/sites-available/000-default.conf:Z
-            - ./log/app6:/var/log/apache2:Z
-
-    sparepart_tsp10:
-        build:
-            context: .
-            dockerfile: ./dockerfile/php-apache2.dockerfile
-            args:
-                - php_version=8.2
-                - app_name=sparepart_tsp10
-        networks:
-            - route
-        restart: always
-        container_name: sparepart_tsp10
-        volumes:
-            - ./app/sparepart_tsp10:/var/www/html:Z
-            - ./config/php8.2/php.ini:/etc/php/8.2/cli/php.ini:Z
-            - ./config/apache2/sparepart_tsp10.conf:/etc/apache2/sites-available/000-default.conf:Z
-            - ./log/sparepart_tsp10:/var/log/apache2:Z
-
+            - ./config/apache2/bengkel_gim.conf:/etc/apache2/sites-available/000-default.conf:Z
+            - ./log/bengkel_gim:/var/log/apache2:Z
     route:
         build:
             context: .
             dockerfile: ./dockerfile/route.dockerfile
         depends_on:
-            - app1
-            - app2
-            - app3
-            - app4
-            - app5
-            - app6
-            - sparepart_tsp10
+            - sparepart_tsp
+            - bengkel_gim
         networks:
             - route
         restart: always
