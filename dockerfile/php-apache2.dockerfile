@@ -16,10 +16,12 @@ RUN apt-get install -y -f software-properties-common
 
 RUN dpkg-reconfigure --frontend noninteractive tzdata
 
-RUN add-apt-repository ppa:ondrej/php && apt-get update
+# Use the repository directly so builds do not depend on the Launchpad API.
+COPY dockerfile/ondrej-php.gpg /usr/share/keyrings/ondrej-php.gpg
+RUN echo "deb [signed-by=/usr/share/keyrings/ondrej-php.gpg] https://ppa.launchpadcontent.net/ondrej/php/ubuntu/ jammy main" > /etc/apt/sources.list.d/ondrej-php.list && apt-get update
 
 RUN apt-get install -y \
-    apt-transport-https curl wget nano git unzip apache2 php$php_version \
+    apt-transport-https curl wget nano git unzip apache2 cron php$php_version \
     php$php_version-imagick \
     php$php_version-curl \
     php$php_version-gd \
@@ -28,6 +30,7 @@ RUN apt-get install -y \
     php$php_version-pgsql \
     php$php_version-bcmath \
     php$php_version-bz2 \
+    php$php_version-zip \
     php$php_version-memcache \
     php$php_version-xml \
     php$php_version-dom
@@ -46,7 +49,13 @@ RUN update-alternatives --set php /usr/bin/php$php_version
 
 RUN a2enmod ssl && service apache2 start && a2enmod rewrite && service apache2 reload
 
-ENTRYPOINT ["/usr/sbin/apachectl", "-DFOREGROUND"]
+COPY dockerfile/cron/laravel-scheduler /etc/cron.d/laravel-scheduler
+RUN chmod 0644 /etc/cron.d/laravel-scheduler && crontab /etc/cron.d/laravel-scheduler
+
+COPY dockerfile/start.sh /start.sh
+RUN chmod +x /start.sh
+
+ENTRYPOINT ["/start.sh"]
 
 RUN rm -r /var/www/html && \
     rm /etc/php/$php_version/cli/php.ini && \

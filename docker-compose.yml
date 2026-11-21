@@ -1,21 +1,21 @@
-version: "3.2"
 services:
-    sparepart_tsp:
+    support_app:
         build:
             context: .
             dockerfile: ./dockerfile/php-apache2.dockerfile
             args:
                 - php_version=8.2
-                - app_name=sparepart_tsp
+                - app_name=support_app
         networks:
             - route
         restart: always
-        container_name: sparepart_tsp
+        container_name: support_app
         ports:
             - "8001:80"
         volumes:
             - ./app/sparepart_tsp:/var/www/html:Z
             - ./config/php8.2/php.ini:/etc/php/8.2/cli/php.ini:Z
+            - ./config/php8.2/php.ini:/etc/php/8.2/apache2/php.ini:Z
             - ./config/apache2/sparepart_tsp.conf:/etc/apache2/sites-available/000-default.conf:Z
             - ./log/sparepart_tsp:/var/log/apache2:Z
     bengkel_gim:
@@ -23,7 +23,7 @@ services:
             context: .
             dockerfile: ./dockerfile/php-apache2.dockerfile
             args:
-                - php_version=8.0
+                - php_version=8.2
                 - app_name=bengkel_gim
         networks:
             - route
@@ -36,13 +36,47 @@ services:
             - ./config/php8.2/php.ini:/etc/php/8.2/cli/php.ini:Z
             - ./config/apache2/bengkel_gim.conf:/etc/apache2/sites-available/000-default.conf:Z
             - ./log/bengkel_gim:/var/log/apache2:Z
+    # gaji_tsp:
+    #     build:
+    #         context: .
+    #         dockerfile: ./dockerfile/php-apache2.dockerfile
+    #         args:
+    #             - php_version=7.4
+    #             - app_name=gaji_tsp
+    #     networks:
+    #         - route
+    #     restart: always
+    #     container_name: gaji_tsp
+    #     ports:
+    #         - "8003:80"
+    #     volumes:
+    #         - ./app/gaji:/var/www/html:Z
+    #         - ./config/php7.4/php.ini:/etc/php/7.4/cli/php.ini:Z
+    #         - ./config/apache2/gaji.conf:/etc/apache2/sites-available/000-default.conf:Z
+    #         - ./log/gaji:/var/log/apache2:Z
+    hris_tsp:
+        build:
+            context: .
+            dockerfile: ./dockerfile/hris_tsp.dockerfile
+            args:
+                - php_version=8.3
+                - app_name=hris_tsp
+        networks:
+            - route
+        restart: always
+        container_name: hris-laju
+        ports:
+            - "8004:80"
+        volumes:
+            - ./app/hr:/var/www/html:Z
+            - ./config/php8.3/php.ini:/etc/php/8.3/cli/php.ini:Z
+            - ./config/php8.3/php.ini:/etc/php/8.3/apache2/php.ini:Z
+            - ./config/apache2/hris_tsp.conf:/etc/apache2/sites-available/000-default.conf:Z
+            - ./log/hris_tsp:/var/log/apache2:Z
     route:
         build:
             context: .
             dockerfile: ./dockerfile/route.dockerfile
-        depends_on:
-            - sparepart_tsp
-            - bengkel_gim
         networks:
             - route
         restart: always
